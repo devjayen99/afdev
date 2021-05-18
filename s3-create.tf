@@ -5,4 +5,10 @@ provider "aws" {
 resource "aws_s3_bucket" "my_bucket" {
   bucket = "csi-terrform-test-01"
   force_destroy = true
+  lifecycle {
+    prevent_destroy = false
+  }
+  versioning {
+    enabled = true
+  }
 }
