@@ -4,5 +4,5 @@ provider "aws" {
 
 resource "aws_s3_bucket" "my_bucket" {
   bucket = "csi-terrform-test-01"
-  acl = "public"
+  acl = "public-read"
 }
